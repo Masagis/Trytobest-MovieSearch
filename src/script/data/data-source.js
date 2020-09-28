@@ -13,7 +13,7 @@ class DataSource {
                 if (responseJson.results) {
                     return Promise.resolve(responseJson.results);
                 } else {
-                    return Promise.reject(`${keyword} tidak ditemukan`)
+                    return Promise.reject(`${keyword} Tidak ditemukan`)
                 }
             })
     }
@@ -27,7 +27,7 @@ class DataSource {
                 if (responseJson) {
                     return Promise.resolve(responseJson);
                 } else {
-                    return Promise.reject(`${id} tidak ditemukan`)
+                    return Promise.reject(`${id} Tidak ditemukan`)
                 }
             })
     }

@@ -5,6 +5,7 @@ import "./script/component/header-nav.js";
 import "./script/component/hero-jum.js";
 import "./script/component/breadcrumb-detail.js";
 import "./script/component/movie-detail.js";
+import "./script/component/footer-bar.js"
 
 import main from "./script/view/main.js";
 import AOS from 'aos';

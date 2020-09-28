@@ -27,10 +27,10 @@ class BreadcrumbDetail extends HTMLElement {
                 <li class="breadcrumb-item"><a href="#">Detail</a></li>
                 <li class="breadcrumb-item active" aria-current="page">${this.currentpage}</li>
             </ol>
-            <button id="backToLanding" class="btn btn-outline-danger rounded-pill float-right"><i class="fa fa-arrow-left"></i> Kembali</button>
+            <button id="backToLanding" class="btn btn-outline-primary rounded-pill float-right"><i class="fa fa-arrow-left"></i> Kembali</button>
         </nav>`;
 
-        $('#backToLanding').click(function() {
+        $('#backToLanding').click(function () {
             $('main').show();
             $('.details').hide();
         });

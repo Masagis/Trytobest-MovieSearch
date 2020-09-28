@@ -107,6 +107,7 @@ class MovieItem extends HTMLElement {
             const dataDetail = {
                 'title': (results.title ? results.title : 'NaN'),
                 'release_date': (results.release_date ? results.release_date : '-'),
+                'popularity': (results.popularity ? results.popularity : 0),
                 'vote_average': (results.vote_average ? results.vote_average : 0),
                 'overview': (results.overview ? results.overview : '-'),
                 'backdrop_path': (results.backdrop_path ? results.c : '-')

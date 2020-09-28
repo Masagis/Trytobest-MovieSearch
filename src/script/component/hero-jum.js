@@ -9,7 +9,7 @@ class Hero extends HTMLElement {
         this.innerHTML = `
         <style>
             .jumbotron {
-                border-radius: 24px;
+                border-radius: 16px;
                 background-color: #f4f6ff;
                 font-family: "Open Sans", sans-serif;
                 margin-bottom: 48px;

@@ -14,42 +14,71 @@ class SearchBar extends HTMLElement {
     }
 
     render() {
-        this.innerHTML = `
+        this.innerHTML = `    
         <style>
-            input[type="search"] {
-                background-color: #f8f8f8;
-                border: 0;
-            }
-
-            input[type="search"]::placeholder {
-                font-size: 0.8rem;
-                color: $gray-500;
-            }
-
+        .search-container {
+            max-width: 100%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            border-radius: 5px;
+            display: flex;
+            position: sticky;
+            top: 10px;
+            background-color: white;
+            margin-bottom: 35px;
+        }
+        
+        .search-container > input {
+            width: 85%;
+            padding: 16px;
+            border: 0;
+            border-bottom: 1px solid black;
+            font-weight: bold;
+        }
+        
+        .search-container > input:focus {
+            outline: 0;
+            border-bottom: 2px solid gray;
+        }
+        
+        .search-container > input:focus::placeholder {
+            font-weight: bold;
+        }
+        
+        .search-container >  input::placeholder {
+            color: $gray-500;
+            font-weight: normal;
+        }
+        
+        .search-container > button {
+            width: 13%;
+            margin-left: auto;
+            padding: 12px;
+            background-color: #001D38;
+            color: white;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+        
+        @media screen and (max-width: 550px){
             .search-container {
-                display: flex;
+                flex-direction: column;
+                position: static;
             }
-
-            .search-container .form-control {
-                padding-left: 3rem;
+        
+            .search-container > input {
+                width: 100%;
+                margin-bottom: 12px;
             }
-
-            .search-container .placeholder-icon {
-                position: absolute;
-                z-index: 2;
-                display: block;
-                width: 3rem;
-                height: 2.375rem;
-                line-height: 2.375rem;
-                text-align: center;
-                pointer-events: none;
-                color: $gray-500;
+        
+            .search-container > button {
+                width: 100%;
             }
+        }        
         </style>
-        <div class="search-container form-group">
-            <span class="fa fa-search placeholder-icon"></span>
-            <input placeholder="find your favorite movies..." class="form-control mr-sm-2" id="searchElement" type="search">
-            <button class="btn btn-dark" id="searchButtonElement" type="button">Search</button>
+        <div id="search-container" class="search-container">
+            <input placeholder="Find your favorite movies..." id="searchElement" type="search">
+            <button id="searchButtonElement" type="submit">Search</button>
         </div>`;
 
         this.querySelector("#searchButtonElement").addEventListener("click", this._clickEvent);
